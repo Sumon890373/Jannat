@@ -3,7 +3,5 @@ module.exports.config={name:"update",eventType:["log:unsubscribe"],version:"beta
 /*
 var volk = event.logMessageData.leftParticipantFbId;
 let ark = JSON.parse(readFileSync(path));
-ark[volk + event.threadID] = "";
-writeFileSync(path, JSON.stringify(ark, null, 2))
-
+ark[volk + even
 */
