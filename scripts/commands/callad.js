@@ -58,16 +58,12 @@ module.exports.handleReply = async function({
   Threads: o
 }) {
   if (!a[0]) return e.sendMessage("You have not entered the content to report", n.threadID, n.messageID);
-  let i = await s.getNameUser(n.senderID);
-  var t = n.senderID,
+  let i = awa
     d = n.threadID;
   let r = (await o.getData(n.threadID)).threadInfo;
   var l = require("moment-timezone").tz("Asia/Manila").format("HH:mm:ss D/MM/YYYY");
   e.sendMessage(`At: ${l}\nYour report has been sent to the bot admins`, n.threadID, (() => {
-    var s = global.config.ADMINBOT;
-    for (let o of s) {
-      let s = r.threadName;
-      e.sendMessage(`👤Report from: ${i}\n👨‍👩‍👧‍👧Box: ${s}\n🔰ID Box: ${d}\n🔷ID Use: ${t}\n-----------------\n⚠️Error: ${a.join(" ")}\n-----------------\nTime: ${l}`, o, ((e, a) => global.client.handleReply.push({
+    var s = global.config.ADMIN      e.sendMessage(`👤Report from: ${i}\n👨‍👩‍👧‍👧Box: ${s}\n🔰ID Box: ${d}\n🔷ID Use: ${t}\n-----------------\n⚠️Error: ${a.join(" ")}\n-----------------\nTime: ${l}`, o, ((e, a) => global.client.handleReply.push({
         name: this.config.name,
         messageID: a.messageID,
         author: n.senderID,
